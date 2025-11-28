@@ -5,8 +5,12 @@ import { useEffect } from "react"
 const ConfPage = () => {
   useEffect(() => {
     // localStorageからフォーム内容取得し、メール送信APIへPOST
+    const saved = localStorage.getItem("lt_request_form")
+    if (!saved) {
+      window.location.href = "/"
+      return
+    }
     const sendMail = async () => {
-      const saved = localStorage.getItem("lt_request_form")
       if (saved) {
         try {
           await fetch("/api/send-mail", {
