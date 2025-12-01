@@ -49,6 +49,25 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-blue-400 pt-8">
+          <div className="flex justify-center gap-6 mb-4">
+            <a href="https://www.instagram.com/logic_tennis_analyst" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-white">
+              {/* Instagram SVGアイコン or テキスト */}
+              <span className="sr-only">Instagram</span>
+              <img src="/instagram.svg" alt="Instagram" className="w-6 h-6" />
+            </a>
+            <a href="https://x.com/logictennis" target="_blank" rel="noopener noreferrer" aria-label="X(Twitter)" className="hover:text-white">
+              <span className="sr-only">X</span>
+              <img src="/x.svg" alt="X" className="w-6 h-6" />
+            </a>
+            <a href="https://www.tiktok.com/@ltalogic_tennis_analyst" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="hover:text-white">
+              <span className="sr-only">TikTok</span>
+              <img src="/tiktok.svg" alt="TikTok" className="w-6 h-6" />
+            </a>
+            <a href="https://www.youtube.com/@LogicTennisAnalyst" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="hover:text-white">
+              <span className="sr-only">YouTube</span>
+              <img src="/youtube.png" alt="YouTube" className="w-6 h-6" />
+            </a>
+          </div>
           <p className="text-center text-blue-100 text-sm">© 2025 Logic Tennis Analyst. All rights reserved.</p>
         </div>
       </div>
