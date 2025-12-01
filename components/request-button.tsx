@@ -103,10 +103,14 @@ export default function RequestButton() {
                                 <h4 className="text-xl font-bold text-[#003d82] mb-4 text-center">プランを選択してください</h4>
                                 <div className="space-y-4 mb-6">
                                     <button
-                                        className="w-full px-4 py-3 rounded-lg border font-semibold transition bg-gray-100 text-[#003d82]"
+                                        className="w-full px-4 py-3 rounded-lg border font-semibold transition bg-green-100 text-green-700 flex items-center justify-between"
                                         onClick={() => handleSelectPlan("standard")}
                                     >
-                                        スタンダード（¥1,500/回）
+                                        <span>
+                                            スタンダード
+                                            <span className="ml-2 text-gray-400 line-through">¥1,500/回</span>
+                                            <span className="ml-2 px-2 py-1 bg-red-500 text-white text-xs rounded">今だけ無料！</span>
+                                        </span>
                                     </button>
                                     <button
                                         className="w-full px-4 py-3 rounded-lg border font-semibold transition bg-gray-100 text-[#003d82]"
@@ -217,19 +221,19 @@ export default function RequestButton() {
                                             申し込み
                                         </button>
                                     </form>
-                                    ) : (
-                                        <div className="py-8 text-center">
-                                            <h5 className="text-lg font-bold mb-6 text-[#003d82]">決済方法を選択してください</h5>
-                                            <div className="flex flex-col gap-6 items-center">
-                                                <a
-                                                    href={selectedPlan === "premium" ? "https://square.link/u/gmHUleyY" : "https://square.link/u/wWXNwq6e"}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    className="w-full max-w-xs px-6 py-4 rounded-lg border-2 border-[#003d82] bg-white text-[#003d82] font-bold text-lg flex items-center justify-center gap-3 shadow hover:bg-blue-50 transition"
-                                                >
-                                                    <span>クレジットカード / GooglePay</span>
-                                                </a>
-                                                {/* <a
+                                ) : (
+                                    <div className="py-8 text-center">
+                                        <h5 className="text-lg font-bold mb-6 text-[#003d82]">決済方法を選択してください</h5>
+                                        <div className="flex flex-col gap-6 items-center">
+                                            <a
+                                                href={selectedPlan === "premium" ? "https://square.link/u/gmHUleyY" : "https://square.link/u/wWXNwq6e"}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="w-full max-w-xs px-6 py-4 rounded-lg border-2 border-[#003d82] bg-white text-[#003d82] font-bold text-lg flex items-center justify-center gap-3 shadow hover:bg-blue-50 transition"
+                                            >
+                                                <span>クレジットカード / GooglePay</span>
+                                            </a>
+                                            {/* <a
                                                     href={selectedPlan === "premium" ? "https://your-paypay-payment-link-premium" : "https://your-paypay-payment-link-standard"}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
@@ -238,9 +242,9 @@ export default function RequestButton() {
                                                     <span>PayPay</span>
                                                     <img src="/paypay.svg" alt="PayPay" className="h-6" />
                                                 </a> */}
-                                            </div>
                                         </div>
-                                    )}
+                                    </div>
+                                )}
                             </>
                         )}
                     </div>

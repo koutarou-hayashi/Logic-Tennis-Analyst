@@ -6,12 +6,19 @@ export default function PricingSection() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h3 className="text-3xl sm:text-4xl font-bold text-[#003d82] mb-12 text-center">料金</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          <div className="bg-gradient-to-br from-[#f8f9fa] to-white p-8 rounded-lg border border-gray-200">
+          <div className="bg-gradient-to-br from-[#f8f9fa] to-white p-8 rounded-lg border border-gray-200 relative">
+            <div className="absolute -top-4 left-6 bg-red-500 text-white px-4 py-1 rounded-full text-sm font-bold shadow">
+              今だけ無料！
+            </div>
             <h4 className="text-xl font-bold text-[#003d82] mb-2">スタンダード</h4>
-            <p className="text-gray-600 mb-6">基本的な動画分析</p>
+            <p className="text-gray-600 mb-6 font-bold">
+              <span className="text-red-500">期間限定！</span> 基本的な動画分析が今だけ無料で体験できます。
+            </p>
             <div className="mb-6">
-              <p className="text-3xl font-bold text-[#003d82]">
-                ¥1,500<span className="text-lg text-gray-600">/回</span>
+              <p className="text-3xl font-bold text-[#003d82] flex items-center gap-3">
+                <span className="line-through text-gray-400">¥1,500</span>
+                <span className="text-red-500 px-3 py-1 rounded text-lg font-bold">無料</span>
+                <span className="text-lg text-gray-600">/回</span>
               </p>
             </div>
             <ul className="space-y-2 text-gray-700 mb-6">
