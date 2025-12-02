@@ -46,6 +46,9 @@ export default function Footer() {
               <br />
               お気軽にお問い合わせください
             </p>
+            <a href="mailto:logic.tennis.analyst.info@gmail.com" className="text-blue-100 text-sm hover:text-white underline mt-2 inline-block">
+              logic.tennis.analyst.info@gmail.com
+            </a>
           </div>
         </div>
         <div className="border-t border-blue-400 pt-8">
