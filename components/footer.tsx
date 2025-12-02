@@ -56,7 +56,7 @@ export default function Footer() {
             <a href="https://www.instagram.com/logic_tennis_analyst" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-white">
               {/* Instagram SVGアイコン or テキスト */}
               <span className="sr-only">Instagram</span>
-              <img src="/instagram.svg" alt="Instagram" className="w-6 h-6" />
+              <img src="/instagram.png" alt="Instagram" className="w-6 h-6" />
             </a>
             <a href="https://x.com/logictennis" target="_blank" rel="noopener noreferrer" aria-label="X(Twitter)" className="hover:text-white">
               <span className="sr-only">X</span>
