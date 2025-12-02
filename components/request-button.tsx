@@ -102,15 +102,19 @@ export default function RequestButton() {
                             <>
                                 <h4 className="text-xl font-bold text-[#003d82] mb-4 text-center">プランを選択してください</h4>
                                 <div className="space-y-4 mb-6">
+                                    <a
+                                        href="https://lin.ee/hJ70x17"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="w-full px-4 py-3 rounded-lg border-2 border-green-500 bg-green-50 font-semibold transition hover:bg-green-100 flex items-center justify-center gap-2 text-green-700"
+                                    >
+                                        <span>LINE友達追加で無料体験</span>
+                                    </a>
                                     <button
-                                        className="w-full px-4 py-3 rounded-lg border font-semibold transition bg-green-100 text-green-700 flex items-center justify-between"
+                                        className="w-full px-4 py-3 rounded-lg border font-semibold transition bg-gray-100 text-[#003d82]"
                                         onClick={() => handleSelectPlan("standard")}
                                     >
-                                        <span>
-                                            スタンダード
-                                            <span className="ml-2 text-gray-400 line-through">¥1,500/回</span>
-                                            <span className="ml-2 px-2 py-1 bg-red-500 text-white text-xs rounded">今だけ無料！</span>
-                                        </span>
+                                        スタンダード（¥1,500/回）
                                     </button>
                                     <button
                                         className="w-full px-4 py-3 rounded-lg border font-semibold transition bg-gray-100 text-[#003d82]"
