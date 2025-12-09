@@ -69,6 +69,25 @@ export default function RequestButton() {
         }
     }
 
+    const handlePayPayPayment = async () => {
+        const amount = selectedPlan === "premium" ? 2500 : 1500
+        try {
+            const res = await fetch("/api/paypay", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ amount, plan: selectedPlan })
+            })
+            const data = await res.json()
+            if (res.ok && data.url) {
+                window.location.href = data.url
+            } else {
+                alert("PayPay決済の開始に失敗しました: " + (data.error || "不明なエラー"))
+            }
+        } catch (err) {
+            alert("PayPay決済時にエラーが発生しました。")
+        }
+    }
+
     return (
         <>
             <div className="text-center">
@@ -237,15 +256,13 @@ export default function RequestButton() {
                                             >
                                                 <span>クレジットカード / GooglePay</span>
                                             </a>
-                                            {/* <a
-                                                    href={selectedPlan === "premium" ? "https://your-paypay-payment-link-premium" : "https://your-paypay-payment-link-standard"}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    className="w-full max-w-xs px-6 py-4 rounded-lg border-2 border-[#22c55e] bg-white text-[#22c55e] font-bold text-lg flex items-center justify-center gap-3 shadow hover:bg-green-50 transition"
-                                                >
-                                                    <span>PayPay</span>
-                                                    <img src="/paypay.svg" alt="PayPay" className="h-6" />
-                                                </a> */}
+                                            <button onClick={handlePayPayPayment}>
+                                                <img
+                                                    src="/paypay.png"
+                                                    alt="PayPay"
+                                                    className="w-full max-w-xs"
+                                                />
+                                            </button>
                                         </div>
                                     </div>
                                 )}
