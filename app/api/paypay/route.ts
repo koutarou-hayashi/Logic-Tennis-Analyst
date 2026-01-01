@@ -17,7 +17,7 @@ export async function POST(request: Request) {
     clientId: apiKey,
     clientSecret: apiSecret,
     merchantId: merchantId,
-    productionMode: true, // 本番環境
+    productionMode: false, // 本番環境
   });
 
   // QRコード生成用のペイロード
