@@ -256,13 +256,13 @@ export default function RequestButton() {
                                             >
                                                 <span>クレジットカード / GooglePay</span>
                                             </a>
-                                            {/* <button onClick={handlePayPayPayment}>
+                                            <button onClick={handlePayPayPayment}>
                                                 <img
                                                     src="/paypay.png"
                                                     alt="PayPay"
                                                     className="w-full max-w-xs"
                                                 />
-                                            </button> */}
+                                            </button>
                                         </div>
                                     </div>
                                 )}
